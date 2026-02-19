@@ -33,6 +33,15 @@ android {
 
 dependencies {
 
+    /*implementation(libs.appcompat)
+    implementation(libs.material)
+    implementation(libs.activity)
+    implementation(libs.constraintlayout)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.ext.junit)
+    androidTestImplementation(libs.espresso.core)
+*/
+
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -40,4 +49,30 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+
+    // Android core
+    implementation(libs.material)
+
+    // MVVM
+    implementation(libs.lifecycleViewModel)
+    implementation(libs.lifecycleLiveData)
+
+    // Coroutines
+    implementation(libs.coroutinesAndroid)
+
+    // Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.retrofitGson)
+
+    // OkHttp
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.logging)
+
+    implementation(libs.recyclerview)
+    implementation(libs.kotlin.stdlib)
+    implementation(libs.sdp)
+    implementation(libs.lottie)
+
+    implementation(libs.gson)
 }
