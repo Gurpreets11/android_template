@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/swipeContainer"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@drawable/bg_swipe_track"
+    android:padding="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Center Text -->
+    <TextView
+        android:id="@+id/txtLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Swipe to Login"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"  />
+
+    <!-- Loading -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <!-- Success Tick -->
+    <ImageView
+        android:id="@+id/ivSuccess"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_check"
+        android:visibility="gone"/>
+
+    <!-- Swipe Thumb -->
+    <ImageView
+        android:id="@+id/ivThumb"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_swipe_thumb_ripple"
+        android:src="@drawable/ic_arrow_right"
+        android:padding="12dp"/>
+
+</FrameLayout>
