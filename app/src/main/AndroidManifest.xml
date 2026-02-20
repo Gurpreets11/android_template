@@ -20,6 +20,9 @@
             android:name=".features.auth.LoginActivity"
             android:exported="false" />
         <activity
+            android:name=".features.auth.SignupActivity"
+            android:exported="false" />
+        <activity
             android:name=".base.BaseActivity"
             android:exported="false" />
         <activity

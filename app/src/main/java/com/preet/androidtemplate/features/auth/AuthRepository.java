@@ -1,30 +1,43 @@
 package com.preet.androidtemplate.features.auth;
 
-
-
 import com.preet.androidtemplate.core.model.BaseResponse;
 import com.preet.androidtemplate.core.model.LoginData;
 import com.preet.androidtemplate.core.model.SignupData;
 import com.preet.androidtemplate.core.model.SignupRequest;
+import com.preet.androidtemplate.core.network.ApiResult;
 import com.preet.androidtemplate.core.network.ApiService;
+import com.preet.androidtemplate.repository.BaseRepository;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import androidx.annotation.NonNull;
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
-public class AuthRepository {
+public class AuthRepository extends BaseRepository {
+
     private final ApiService apiService;
 
     public AuthRepository(ApiService apiService) {
-        this.apiService = apiService; // safe
+        this.apiService = apiService;
     }
 
-    public MutableLiveData<BaseResponse<LoginData>> login(String email, String password) {
+    public LiveData<ApiResult<BaseResponse<LoginData>>> login(String email, String password) {
+        MutableLiveData<ApiResult<BaseResponse<LoginData>>> result = new MutableLiveData<>();
+        Map<String, String> body = new HashMap<>();
+        body.put("email", email);
+        body.put("password", password);
+        executeCall(apiService.login(body), result);
+        return result;
+    }
+
+    public LiveData<ApiResult<BaseResponse<SignupData>>> signup(SignupRequest request) {
+        MutableLiveData<ApiResult<BaseResponse<SignupData>>> result = new MutableLiveData<>();
+        executeCall(apiService.signup(request), result);
+        return result;
+    }
+
+    /*public MutableLiveData<BaseResponse<LoginData>> login(String email, String password) {
         MutableLiveData<BaseResponse<LoginData>> result = new MutableLiveData<>();
         Map<String, String> body = new HashMap<>();
         body.put("email", email);
@@ -58,6 +71,7 @@ public class AuthRepository {
             }
         });
         return result;
-    }
+    }*/
 }
+
 
