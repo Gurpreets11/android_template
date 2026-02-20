@@ -65,10 +65,10 @@ The goal is to keep the code scalable, maintainable, and easy to extend.
    - ViewModels registered in MyApplication
    - Factory created once
    - Activities get ViewModel using:
-    new ViewModelProvider(this, factory).get(AuthViewModel.class);
+    
+	new ViewModelProvider(this, factory).get(AuthViewModel.class);
 
-
-## This avoids creating separate factories.
+ This avoids creating separate factories.
 
 ### 📱 Screens Implemented
 
@@ -94,6 +94,19 @@ The goal is to keep the code scalable, maintainable, and easy to extend.
    - Removed unnecessary null checks from UI
    - Moved API validation responsibility to Repository
    - Improved overall scalability
+
+## 🏗 Current Flow
+
+	Activity
+		↓
+	ViewModel
+		↓
+	Repository
+		↓
+	BaseRepository
+		↓
+	Retrofit API
+
 
 ## 🎯 Current Project Status
 
