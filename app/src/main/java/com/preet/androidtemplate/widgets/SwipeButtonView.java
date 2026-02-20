@@ -1,4 +1,4 @@
-package com.preet.androidtemplate.core.widgets;
+package com.preet.androidtemplate.widgets;
 
 import android.content.Context;
 import android.util.AttributeSet;

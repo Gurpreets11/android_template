@@ -13,9 +13,9 @@ import com.preet.androidtemplate.core.model.SignupData;
 import com.preet.androidtemplate.core.model.SignupRequest;
 import com.preet.androidtemplate.core.storage.PrefKeys;
 import com.preet.androidtemplate.core.storage.PrefManager;
-import com.preet.androidtemplate.core.utils.AppLogger;
-import com.preet.androidtemplate.core.utils.AppToast;
-import com.preet.androidtemplate.core.utils.ValidationUtils;
+import com.preet.androidtemplate.utils.AppLogger;
+import com.preet.androidtemplate.utils.AppToast;
+import com.preet.androidtemplate.utils.ValidationUtils;
 import com.preet.androidtemplate.factory.AppViewModelFactory;
 import com.preet.androidtemplate.viewmodel.AuthViewModel;
 
@@ -161,7 +161,7 @@ public class SignupActivity extends AppCompatActivity {
                     //swipeLogin.showSuccess();
                     AppLogger.api("result.message : " + result.message);
                     AppLogger.api("result.data.getStatusMessage() : " + result.data.getStatusMessage());
-                    AppToast.getInstance().show(this, "" + result.data.getStatusMessage());
+                    AppToast.getInstance().show(this, result.data.getStatusMessage());
 
                     SignupData data = result.data.getData().get(0);
                     if (data != null) {

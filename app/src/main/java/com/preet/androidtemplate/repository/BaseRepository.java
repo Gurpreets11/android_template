@@ -3,8 +3,9 @@ package com.preet.androidtemplate.repository;
 import com.google.gson.Gson;
 import com.preet.androidtemplate.core.model.BaseResponse;
 import com.preet.androidtemplate.core.network.ApiResult;
-import com.preet.androidtemplate.core.utils.AppLogger;
+import com.preet.androidtemplate.utils.AppLogger;
 
+import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
 
 import retrofit2.Call;
@@ -31,9 +32,9 @@ public abstract class BaseRepository {
     */
     protected <T> void executeCall(Call<BaseResponse<T>> call, MutableLiveData<ApiResult<BaseResponse<T>>> result) {
         result.setValue(ApiResult.loading());
-        call.enqueue(new Callback<BaseResponse<T>>() {
+        call.enqueue(new Callback<>() {
             @Override
-            public void onResponse(Call<BaseResponse<T>> call, Response<BaseResponse<T>> response) {
+            public void onResponse(@NonNull Call<BaseResponse<T>> call, @NonNull Response<BaseResponse<T>> response) {
                 AppLogger.api("response.isSuccessful() : " + response.isSuccessful());
                 // HTTP error (HTTP 401, 500, 403)
                 if (!response.isSuccessful()) {
@@ -72,7 +73,7 @@ public abstract class BaseRepository {
             }
 
             @Override
-            public void onFailure(Call<BaseResponse<T>> call, Throwable t) {
+            public void onFailure(@NonNull Call<BaseResponse<T>> call, @NonNull Throwable t) {
                 result.setValue(ApiResult.error(t.getMessage()));
             }
         });

@@ -1,6 +1,8 @@
-package com.preet.androidtemplate;
+package com.preet.androidtemplate.features.home;
 
 import android.os.Bundle;
+
+import com.preet.androidtemplate.R;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;

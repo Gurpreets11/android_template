@@ -78,7 +78,7 @@
             android:layout_gravity="center_horizontal"
             android:visibility="invisible" />
 
-        <com.preet.androidtemplate.core.widgets.SwipeButtonView
+        <com.preet.androidtemplate.widgets.SwipeButtonView
             android:id="@+id/swipeLogin"
             android:layout_width="match_parent"
             android:layout_height="56dp"

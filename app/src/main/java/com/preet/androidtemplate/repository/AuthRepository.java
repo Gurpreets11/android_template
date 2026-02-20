@@ -1,4 +1,4 @@
-package com.preet.androidtemplate.features.auth;
+package com.preet.androidtemplate.repository;
 
 import com.preet.androidtemplate.core.model.BaseResponse;
 import com.preet.androidtemplate.core.model.LoginData;
@@ -6,7 +6,6 @@ import com.preet.androidtemplate.core.model.SignupData;
 import com.preet.androidtemplate.core.model.SignupRequest;
 import com.preet.androidtemplate.core.network.ApiResult;
 import com.preet.androidtemplate.core.network.ApiService;
-import com.preet.androidtemplate.repository.BaseRepository;
 
 import java.util.HashMap;
 import java.util.Map;

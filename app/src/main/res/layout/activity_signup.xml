@@ -187,7 +187,7 @@
             android:visibility="visible"
             android:text="Create Account" />
 
-        <com.preet.androidtemplate.core.widgets.SwipeButtonView
+        <com.preet.androidtemplate.widgets.SwipeButtonView
             android:id="@+id/swipeSignup"
             android:layout_width="match_parent"
             android:layout_height="56dp"

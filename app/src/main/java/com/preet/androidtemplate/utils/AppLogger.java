@@ -1,4 +1,4 @@
-package com.preet.androidtemplate.core.utils;
+package com.preet.androidtemplate.utils;
 
 
 import android.util.Log;

@@ -5,15 +5,15 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 
-import com.preet.androidtemplate.MainActivity;
+import com.preet.androidtemplate.features.home.MainActivity;
 import com.preet.androidtemplate.MainApplication;
 import com.preet.androidtemplate.R;
 import com.preet.androidtemplate.base.BaseActivity;
 import com.preet.androidtemplate.core.model.LoginData;
 import com.preet.androidtemplate.core.storage.PrefManager;
-import com.preet.androidtemplate.core.utils.AppToast;
-import com.preet.androidtemplate.core.utils.ValidationUtils;
-import com.preet.androidtemplate.core.widgets.SwipeButtonView;
+import com.preet.androidtemplate.utils.AppToast;
+import com.preet.androidtemplate.utils.ValidationUtils;
+import com.preet.androidtemplate.widgets.SwipeButtonView;
 import com.preet.androidtemplate.factory.AppViewModelFactory;
 import com.preet.androidtemplate.viewmodel.AuthViewModel;
 

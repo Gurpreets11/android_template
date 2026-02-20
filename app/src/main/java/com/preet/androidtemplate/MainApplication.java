@@ -10,9 +10,9 @@ import androidx.lifecycle.ViewModel;
 
 import com.preet.androidtemplate.core.network.ApiClient;
 import com.preet.androidtemplate.core.network.ApiService;
-import com.preet.androidtemplate.core.utils.GlobalExceptionHandler;
+import com.preet.androidtemplate.utils.GlobalExceptionHandler;
 import com.preet.androidtemplate.factory.AppViewModelFactory;
-import com.preet.androidtemplate.features.auth.AuthRepository;
+import com.preet.androidtemplate.repository.AuthRepository;
 import com.preet.androidtemplate.viewmodel.AuthViewModel;
 
 public class MainApplication extends Application {

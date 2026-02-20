@@ -7,8 +7,8 @@ import com.preet.androidtemplate.core.model.LoginData;
 import com.preet.androidtemplate.core.model.SignupData;
 import com.preet.androidtemplate.core.model.SignupRequest;
 import com.preet.androidtemplate.core.network.ApiResult;
-import com.preet.androidtemplate.core.utils.ValidationUtils;
-import com.preet.androidtemplate.features.auth.AuthRepository;
+import com.preet.androidtemplate.utils.ValidationUtils;
+import com.preet.androidtemplate.repository.AuthRepository;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
