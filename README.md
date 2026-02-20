@@ -1,13 +1,14 @@
 # android_template
 
-##📱 Android MVVM Base Project
+## 📱 Android MVVM Base Project
 
 This project is built using MVVM architecture with clean structure and proper API handling.
 
 The goal is to keep the code scalable, maintainable, and easy to extend.
 
-###🚀 What Has Been Implemented
-*🔹 API Setup
+### 🚀 What Has Been Implemented
+
+**🔹 API Setup**
 
    - Retrofit API client setup
 
@@ -16,8 +17,9 @@ The goal is to keep the code scalable, maintainable, and easy to extend.
    - API Service interface created
 
    - Centralized API calling
+   
 
-*🔹 Common API Response Model
+**🔹 Common API Response Model**
 
    - Created BaseResponse class
 
@@ -30,8 +32,9 @@ The goal is to keep the code scalable, maintainable, and easy to extend.
 		- data
 
    - Added isSuccess() method (statusCode == 200)
+   
 
-*🔹 Repository Layer
+**🔹 Repository Layer**
 
    - Created BaseRepository
 
@@ -52,104 +55,113 @@ The goal is to keep the code scalable, maintainable, and easy to extend.
 	- Feature repository:
 
 	   - AuthRepository
+	   
 
-*🔹 ViewModel Layer
+**🔹 ViewModel Layer**
 
-Created AuthViewModel
+   - Created AuthViewModel
 
-ViewModel calls repository
+   - ViewModel calls repository
 
-UI observes LiveData
+   - UI observes LiveData
 
-No API logic inside Activity
+   - No API logic inside Activity
 
-🔹 ApiResult Wrapper
+**🔹 ApiResult Wrapper**
 
-Created a common result class to manage:
+   - Created a common result class to manage:
 
-LOADING
+		- LOADING
 
-SUCCESS
+		- SUCCESS
 
-ERROR
+		- ERROR
 
-This helps UI react properly based on API state.
+   - This helps UI react properly based on API state.
 
 🔹 Generic ViewModel Factory
 
-Single AppViewModelFactory
+   - Single AppViewModelFactory
 
-No multiple factory classes
+   - No multiple factory classes
 
-Scalable for unlimited ViewModels
+   - Scalable for unlimited ViewModels
 
-Uses Map + Supplier approach
+   - Uses Map + Supplier approach
 
 🔹 ViewModel Initialization from Application Class
 
-ViewModels registered in MyApplication
+   - ViewModels registered in MyApplication
 
-Factory created once
+   - Factory created once
 
-Activities get ViewModel using:
+   - Activities get ViewModel using:
 
-    new ViewModelProvider(this, factory).get(AuthViewModel.class);
+     new ViewModelProvider(this, factory).get(AuthViewModel.class);
 
 
-This avoids creating separate factories.
+## This avoids creating separate factories.
 
-📱 Screens Implemented
+### 📱 Screens Implemented
 
-✅ Splash Activity
+   - ✅ Splash Activity
 
-✅ Login Activity
+   - ✅ Login Activity
 
-✅ Signup Activity
+   - ✅ Signup Activity
 
-✅ Main Screen (currently blank)
+   - ✅ Main Screen (currently blank)
 
-🛠 Utility Classes
 
-✅ NetworkUtil → Check internet connection
+### 🛠 Utility Classes
 
-✅ SharedPref Manager → Store token & user data
+   - ✅ NetworkUtil → Check internet connection
 
-✅ AppToast → Reusable toast class
+   - ✅ SharedPref Manager → Store token & user data
 
-✅ Validation → Input validation methods
+   - ✅ AppToast → Reusable toast class
 
-🆕 Improvements Done Recently
+   - ✅ Validation → Input validation methods
 
-Improved BaseRepository
 
-Added proper HTTP 401 handling
+### 🆕 Improvements Done Recently
 
-Parsed response.errorBody() correctly
+   - Improved BaseRepository
 
-Fixed login error not showing in UI
+   - Added proper HTTP 401 handling
 
-Cleaned ViewModel logic
+   - Parsed response.errorBody() correctly
 
-Removed unnecessary null checks from UI
+   - Fixed login error not showing in UI
 
-Moved API validation responsibility to Repository
+   - Cleaned ViewModel logic
 
-Improved overall scalability
+   - Removed unnecessary null checks from UI
 
-🎯 Current Project Status
+   - Moved API validation responsibility to Repository
 
-Clean MVVM structure
+   - Improved overall scalability
 
-Centralized API handling
+## 🎯 Current Project Status
 
-Proper error management
+   - Clean MVVM structure
 
-Scalable ViewModel creation
+   - Centralized API handling
 
-Internet checking implemented
+   - Proper error management
 
-Token storage implemented
+   - Scalable ViewModel creation
 
-Login flow working
+   - Internet checking implemented
 
-Invalid login error handled correctly
+   - Token storage implemented
+
+   - Login flow working
+
+   - Invalid login error handled correctly
+   
+   
+   
+### 👨‍💻 Project Type
+
+	Android App (Java) – MVVM + Repository Pattern   
