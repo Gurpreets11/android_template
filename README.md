@@ -1,58 +1,59 @@
 # android_template
-📱 Android MVVM Base Project
+
+##📱 Android MVVM Base Project
 
 This project is built using MVVM architecture with clean structure and proper API handling.
 
 The goal is to keep the code scalable, maintainable, and easy to extend.
 
-🚀 What Has Been Implemented
-🔹 API Setup
+###🚀 What Has Been Implemented
+*🔹 API Setup
 
-Retrofit API client setup
+   - Retrofit API client setup
 
-Base URL configuration
+   - Base URL configuration
 
-API Service interface created
+   - API Service interface created
 
-Centralized API calling
+   - Centralized API calling
 
-🔹 Common API Response Model
+*🔹 Common API Response Model
 
-Created BaseResponse class
+   - Created BaseResponse class
 
-Handles:
+   - Handles:
 
-statusCode
+		- statusCode
 
-statusMessage
+		- statusMessage
 
-data
+		- data
 
-Added isSuccess() method (statusCode == 200)
+   - Added isSuccess() method (statusCode == 200)
 
-🔹 Repository Layer
+*🔹 Repository Layer
 
-Created BaseRepository
+   - Created BaseRepository
 
-All API calls pass through it
+   - All API calls pass through it
 
-Handles:
+   - Handles:
 
-Loading state
+	   - Loading state
 
-HTTP errors (401, 500 etc.)
+	   - HTTP errors (401, 500 etc.)
 
-Parsing errorBody()
+	   - Parsing errorBody()
 
-Business errors (statusCode != 200)
+	   - Business errors (statusCode != 200)
 
-Empty data handling
+	   - Empty data handling
 
-Feature repository:
+	- Feature repository:
 
-AuthRepository
+	   - AuthRepository
 
-🔹 ViewModel Layer
+*🔹 ViewModel Layer
 
 Created AuthViewModel
 
