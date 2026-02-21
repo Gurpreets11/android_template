@@ -82,6 +82,7 @@ The goal is to keep the code scalable, maintainable, and easy to extend.
    - ✅ NetworkUtil → Check internet connection
    - ✅ SharedPref Manager → Store token & user data
    - ✅ AppToast → Reusable toast class
+   - ✅ AppLogger → Reusable logger class
    - ✅ Validation → Input validation methods
 
 ### 🆕 Improvements Done Recently
